@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.1.1">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>455</x>
+      <y>210</y>
+      <w>168</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>Controller
+--
+Description:
+	Plays sounds or record stream of 
+	played music
+	
+	-Keypad ctrl:
+	get mode, keypad bit #
+	play correspoding sound
+
+	-Record and Play ctrl:
+	record played sounds
+	play them when played
+	pause or stop according to btn press
+--
+Music currentMusic;
+-int mode
+--
+Record():Music
+play(Music music):void
+pause():void
+stop():void
+save(Music Music):music
+
+setMode():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>238</x>
+      <y>238</y>
+      <w>147</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Music
+--
+-MP3 mp3;
+-string name;
+-int timeLegnth;
+-int state;
+--
++Music();
++getName();
++setName();
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>511</x>
+      <y>1064</y>
+      <w>91</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>DipSW
+--
+JNI
+-int mode;
+--
++open();
++read():int
++close();
++changeMode():int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>266</x>
+      <y>833</y>
+      <w>112</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>&lt;Interface&gt;
+HW
+--
+JNI
+--
++open();
++write();
++read();
++close();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>399</x>
+      <y>1064</y>
+      <w>91</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Keypad
+--
+JNI
+-int mode;
+--
++open();
++read():int
++close();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>623</x>
+      <y>1064</y>
+      <w>91</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>LED
+--
+JNI
+--
++open();
++write();
++read();
++close();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>735</x>
+      <y>1064</y>
+      <w>91</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>TextLCD
+--
+JNI
+--
++open();
++write();
++read();
++close();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>924</y>
+      <w>168</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;220.0;70.0;220.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>294</x>
+      <y>924</y>
+      <w>245</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;330.0;70.0;330.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>308</x>
+      <y>924</y>
+      <w>343</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;470.0;70.0;470.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>924</y>
+      <w>420</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;580.0;70.0;580.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>469</x>
+      <y>763</y>
+      <w>154</w>
+      <h>315</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;430.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>588</x>
+      <y>763</y>
+      <w>56</w>
+      <h>315</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;430.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>658</x>
+      <y>763</y>
+      <w>28</w>
+      <h>315</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>20.0;430.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>679</x>
+      <y>763</y>
+      <w>126</w>
+      <h>315</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;430.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1099</x>
+      <y>308</y>
+      <w>504</w>
+      <h>749</h>
+    </coordinates>
+    <panel_attributes>GUI
+layer=-3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>280</y>
+      <w>91</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>448</x>
+      <y>0</y>
+      <w>280</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>DB
+--
+id: Long="36548"
+[waiting for message]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>581</x>
+      <y>511</y>
+      <w>322</w>
+      <h>259</h>
+    </coordinates>
+    <panel_attributes>Board
+--
+Music music
+-Controller controller
+
+-Keypad keyPad
+
+-DipSW dipSW
+-LED led
+-TextLCD tLCD
+-7segment 7seg
+
+--
+
+doKeypad():void
+
++DipSW():void
++LED():void
++ColorLED():void
++TextLCD():void
++DotMetrix():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>203</x>
+      <y>154</y>
+      <w>798</w>
+      <h>644</h>
+    </coordinates>
+    <panel_attributes>CORE
+layer=-3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1183</x>
+      <y>546</y>
+      <w>287</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes>MainActivity
+--
+-string name
+-TextField name
+-button: play
+-button: record
+-button: Stop
+-button: Pause
+-Board Board
+--
+getName()
+setName(name):void
+
+play():void
+record():void
+stop():void
+pause():void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>616</x>
+      <y>245</y>
+      <w>91</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;220.0;100.0;380.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>497</x>
+      <y>112</y>
+      <w>21</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>896</x>
+      <y>637</y>
+      <w>301</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;410.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>742</x>
+      <y>266</y>
+      <w>217</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Mixer		
+--
+Description:
+	Play 2/3 different sound at a same time
+
+	play music
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>616</x>
+      <y>224</y>
+      <w>140</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>180.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>252</x>
+      <y>812</y>
+      <w>742</w>
+      <h>399</h>
+    </coordinates>
+    <panel_attributes>JNI
+layer=-3</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

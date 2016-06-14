@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>300</y>
+      <w>240</w>
+      <h>540</h>
+    </coordinates>
+    <panel_attributes>Controller
+--
+Description:
+	Plays sounds or record stream of 
+	played music
+	
+	-Keypad ctrl:
+	get mode, keypad bit #
+	play correspoding sound
+
+	-Record and Play ctrl:
+	record played sounds
+	play them when played
+	pause or stop according to btn press
+--
+Music currentMusic;
+-int mode
+--
+Record():Music
+play(Music music):void
+pause():void
+stop():void
+save(Music Music):music
+
+setMode():void
+
+KeyPadCtl(int mod, int input)
+keyPadListener(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>610</x>
+      <y>1520</y>
+      <w>130</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>DipSW
+--
+JNI
+-int mode;
+--
++open();
++read():int
++close();
++changeMode():int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>260</x>
+      <y>1190</y>
+      <w>160</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>&lt;Interface&gt;
+HW
+--
+JNI
+--
++open();
++write();
++read();
++close();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>1520</y>
+      <w>130</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Keypad
+--
+JNI
+-int mode;
+--
++open();
++read():int
++close();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>770</x>
+      <y>1520</y>
+      <w>130</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>LED
+--
+JNI
+--
++open();
++write();
++read();
++close();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>930</x>
+      <y>1520</y>
+      <w>130</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>TextLCD
+--
+JNI
+--
++open();
++write();
++read();
++close();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>1320</y>
+      <w>240</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;220.0;70.0;220.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>1320</y>
+      <w>350</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;330.0;70.0;330.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>1320</y>
+      <w>490</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;470.0;70.0;470.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>1320</y>
+      <w>600</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;580.0;70.0;580.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>550</x>
+      <y>830</y>
+      <w>60</w>
+      <h>710</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;690.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>830</y>
+      <w>120</w>
+      <h>710</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;690.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>830</y>
+      <w>180</w>
+      <h>710</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;690.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>830</y>
+      <w>290</w>
+      <h>710</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>270.0;690.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1450</x>
+      <y>440</y>
+      <w>720</w>
+      <h>1070</h>
+    </coordinates>
+    <panel_attributes>GUI
+layer=-3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>520</x>
+      <y>0</y>
+      <w>400</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>DB
+--
+id: Long="36548"
+[waiting for message]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1570</x>
+      <y>780</y>
+      <w>410</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>MainActivity
+--
+-string name
+-TextField name
+-button: play
+-button: record
+-button: Stop
+-button: Pause
+-Board Board
+--
+getName()
+setName(name):void
+
+play():void
+record():void
+stop():void
+pause():void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>160</y>
+      <w>30</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>580</y>
+      <w>820</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;800.0;340.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>940</x>
+      <y>380</y>
+      <w>310</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Mixer		
+--
+Description:
+	Play 2/3 different sound at a same time
+
+	play music
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>300</y>
+      <w>190</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;110.0;90.0;110.0;90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>240</x>
+      <y>1160</y>
+      <w>1060</w>
+      <h>570</h>
+    </coordinates>
+    <panel_attributes>JNI
+layer=-3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>380</x>
+      <y>220</y>
+      <w>930</w>
+      <h>670</h>
+    </coordinates>
+    <panel_attributes>CORE
+layer=-3</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

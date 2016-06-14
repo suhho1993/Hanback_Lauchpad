@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.1.1">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>765</x>
+      <y>260</y>
+      <w>200</w>
+      <h>215</h>
+    </coordinates>
+    <panel_attributes>Controller
+--
+-Dipsw dipSw
+-Keypad keyPad
+-soundThread mThread
+
+int m_mod;
+int m_keyVal
+int m_resId
+
+-SoundPool m_soundPool
+
+-Context mContext
+
+-int[] soundKey
+-int[] soundKey1
+-int[] soundKey2
+-int[] soundKey3 //load music id
+-int[] soundBank// to Store music id
+--
+
++Controller(Context context){
+	}
+
++playSound():boolean
+-loadSound():void
++setSound():void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>535</x>
+      <y>415</y>
+      <w>145</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>DipSW
+--
+-bool m_Start;//start condition
+-int NewValue;
+
+--
++Dipsw(){
+	int res=Open();
+	}
+	
+-JNIFUNCTION-
++Open();
++Close();
++GetValue():int
+
++UpdateValue():int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>420</y>
+      <w>150</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>Keypad
+--
+JNI
+-int mode;
+--
++open();
++getValue():int
++close();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>370</x>
+      <y>330</y>
+      <w>55</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;90.0;70.0;90.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>330</y>
+      <w>175</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;330.0;50.0;330.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>475</x>
+      <y>310</y>
+      <w>300</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;220.0;10.0;10.0;580.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>335</y>
+      <w>135</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;160.0;10.0;10.0;250.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1055</x>
+      <y>230</y>
+      <w>230</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>GUI
+layer=-3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1075</x>
+      <y>295</y>
+      <w>125</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>MainActivity
+--
+-MediaPlayer bgm;
+
+-Controller controller
+
+-Context mContex
+
+-button: play
+-button: record
+-button: Stop
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>960</x>
+      <y>360</y>
+      <w>125</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;230.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>345</x>
+      <y>210</y>
+      <w>360</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>JNI
+layer=-3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>715</x>
+      <y>220</y>
+      <w>310</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>CORE
+layer=-3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>250</y>
+      <w>80</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>&lt;Interface&gt;
+HW
+--
+JNI
+--
++open();
++getValue();
++close();
+
++UpdateValue();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>765</x>
+      <y>505</y>
+      <w>105</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>soundThread
+--
+@override
+run(){
+	Update dipsw
+	play sound
+	}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>785</x>
+      <y>470</y>
+      <w>15</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+</diagram>
