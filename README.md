@@ -4,6 +4,7 @@
 This application is to build an working launchpad(DJ Pad) using  Hanback electroinc's HBE-SM5-S4210. 
 
 A. Application requirements
+	
 	1.Use keypad to make sound. Each keypad button will make different sound corresponding to current sound mode.
 	2.Use Dip-switch to change sound mode.
 	3.Use Text LED to dispaly current sound mode.
